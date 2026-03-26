@@ -215,18 +215,55 @@ export const challenges = [
     title: "113 Spring isn't pulling people across the threshold",
     client: "CHANEL",
     severity: "high",
-    mentionCount: 3,
+    mentionCount: 5,
     firstMentioned: "Jan 2026",
     lastMentioned: "March 26, 2026",
     status: "active-investigation",
     clientUpdated: true,
     lastClientUpdate: "Email from Charles — 14 experimentation paths proposed",
+    headline: "113 Spring averages 51 visits per week — in one of the highest-traffic retail corridors in the US.",
+    deadline: "Greg needs commercial viability by April 2nd.",
+    rootCauses: [
+      "Entrance signals exclusivity, not accessibility — people assume it's invite-only",
+      "Products feel conceptual rather than desirable — like concept cars nobody buys",
+      "No recurring reason to return — nothing builds habit or word-of-mouth",
+      "6-month rotation cycle kills momentum before anything gains traction",
+    ],
     summary:
-      "The space exists. The longevity positioning exists. But people aren't walking in. Street-level visibility is low, the entrance doesn't pull you in, and there's no clear reason to visit today versus next month. Charles has mapped concrete paths: stronger sidewalk interruption, entrance-forward activations, hero SKUs worth seeking out, and recurring programming that builds habit. The demand is there — longevity searches are up 4X year-over-year. 113 Spring needs to convert that interest into footfall.",
+      "113 Spring averages 51 visits per week — in one of the highest-traffic retail corridors in the US. Four root causes identified: (1) the entrance signals exclusivity, not accessibility; (2) products feel conceptual rather than desirable; (3) no recurring reason to return; (4) the 6-month rotation cycle kills momentum before anything builds traction. Greg needs commercial viability by April 2nd.",
     callMentions: [
-      { date: "Jan 2026", context: "113 Spring strategy", quote: "Traffic remains the core challenge — footfall isn't converting to engagement" },
+      { date: "Feb 12, 2026", context: "Bundl Traffic Brainstorm", quote: '"51 visits in a week. In SoHo. That\'s 10 per day in the most heavily trafficked area in the US."' },
+      { date: "Feb 12, 2026", context: "Bundl Traffic Brainstorm", quote: '"When you see the store, you don\'t want to enter because it feels so confidential. People think it\'s invite-only."' },
+      { date: "Feb 12, 2026", context: "Bundl Traffic Brainstorm", quote: '"113 Spring feels like a garage full of concept cars. Nobody\'s buying a concept car."' },
       { date: "March 24, 2026", context: "Step Back Session", quote: "April 2nd flagged as decision point for commercial model" },
       { date: "March 26, 2026", context: "Charles email to Greg", quote: '"Test stronger sidewalk interruption — A-frames, pavement decals, visible demos at the door"' },
+    ],
+    // Internal Bundl insights from team brainstorms
+    internalInsights: [
+      {
+        type: "diagnosis",
+        insight: "The space was designed for architectural discovery, not retail conversion",
+        source: "Bundl Traffic Brainstorm · Feb 12",
+        detail: "Snøhetta's brief was 'do not make it look like a Chanel boutique.' The objective was never to sell — it was to gather learnings. Now Greg needs commercial viability, but the physical design works against foot traffic.",
+      },
+      {
+        type: "diagnosis",
+        insight: "The 6-month cycle rotation kills momentum before anything can stick",
+        source: "Bundl Traffic Brainstorm · Feb 12",
+        detail: "Products and themes rotate every 6 months. If one cycle isn't working, they shouldn't rigidly switch — they should let winners run and kill underperformers faster.",
+      },
+      {
+        type: "cross-client",
+        insight: "Olius learning: new retail takes 6 months before traffic patterns stabilize",
+        source: "Bundl · Olius engagement",
+        detail: "From the Olius store launch: you have to accept that a store takes time to kick off. You can't expect immediate results. Lower the burn rate, run lean experiments, and give tactics time to compound (Google reviews, word of mouth, search indexing).",
+      },
+      {
+        type: "strategic-question",
+        insight: "The Chanel brand card hasn't been played — is it time?",
+        source: "Bundl Traffic Brainstorm · Feb 12",
+        detail: "113 Spring has operated without Chanel branding. At some point, the team needs to decide: does revealing the Chanel connection change everything? It's a big strategic lever that's been left on the table.",
+      },
     ],
     externalSolutions: [
       {
@@ -251,28 +288,45 @@ export const challenges = [
         relevance: "Demand exists at scale — the gap is converting digital interest into physical visits",
       },
       {
-        type: "case-study",
-        title: "lululemon drives consistent footfall through recurring ambassador programming",
-        source: "Retail Dive · Community Retail",
-        image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80",
-        relevance: "Predictable weekly formats build habit and repeat traffic — not one-off events",
+        type: "analogy",
+        title: "Speakeasy bars are hidden but packed — how do they drive traffic?",
+        source: "Bundl Traffic Brainstorm · Feb 12",
+        image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=400&q=80",
+        relevance: "Google Reviews, word of mouth, being 'known' in the right circles. If 113 Spring embraces exclusivity, it needs the discovery mechanics to match.",
       },
       {
-        type: "research",
-        title: "Specialty retail becomes destination around sought-after hero SKUs",
-        source: "McKinsey · Luxury Retail 2026",
+        type: "tactic",
+        title: "Product-led search capture: people Google specific products and walk to where they're sold",
+        source: "Bundl Traffic Brainstorm · Feb 12",
         image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&q=80",
-        relevance: "Introduce 2-3 must-seek longevity products that generate intentional visits",
+        relevance: "Stock hero longevity products that people actively search for (e.g., David Protein, AG1). If you have the products people want, they'll find you.",
       },
     ],
     suggestedApproach: {
-      title: "113 Spring Traffic Playbook",
-      description: "Test the highest-leverage traffic drivers from Charles's paths. Focus on three vectors: make the entrance irresistible, give people a reason to visit this week, and create products worth seeking out.",
-      steps: [
-        "Test entrance-forward activation: Move a longevity experience to the front third — measure entry rate lift",
-        "Test sidewalk interruption: A-frame, pavement activation, visible demo at door — measure passerby-to-entry conversion",
-        "Launch recurring weekly format: One predictable longevity ritual (recovery, movement, assessment) — measure repeat visit rate",
-        "Introduce hero SKU: One highly specific, must-seek longevity product — measure intentional visits vs. walk-ins",
+      title: "Three High-Potential Solutions",
+      description: "Based on internal diagnosis and external signals, these are the highest-leverage moves to test before April 2nd.",
+      solutions: [
+        {
+          title: "Make the entrance undeniably public",
+          insight: "People assume 113 Spring is invite-only. The entrance doesn't say 'walk in.' This is the highest-leverage fix — nothing else matters if people don't cross the threshold.",
+          action: "Run a 2-week sidewalk activation test: A-frame signage, visible activity at the door (demo station, greeter), pavement decals. Measure passerby-to-entry conversion. Gentle Monster proves entrance-forward activation drives 45% of visits.",
+          effort: "Low",
+          impact: "High",
+        },
+        {
+          title: "Stock products people actually search for",
+          insight: "The current range feels like concept cars — progressive but not something you'd seek out. Meanwhile, longevity search interest is up 4x YoY. People Google specific products and walk to where they're sold.",
+          action: "Identify 2–3 hero longevity SKUs with high US search volume (e.g., David Protein, AG1, LMNT). Stock them visibly. Measure intentional visits vs. walk-ins. This turns 113 Spring into a destination, not a discovery.",
+          effort: "Medium",
+          impact: "High",
+        },
+        {
+          title: "Create a weekly ritual worth returning for",
+          insight: "There's no recurring reason to come back. The 6-month cycle rotation means nothing builds traction. Speakeasy bars are hidden but packed — because they're 'known' in the right circles through word of mouth and reviews.",
+          action: "Launch one predictable weekly format: a recovery session, longevity consultation, or movement class. Same time, every week. This builds habit, generates Google reviews, and creates word-of-mouth. Measure repeat visit rate and referral source.",
+          effort: "Medium",
+          impact: "High",
+        },
       ],
     },
     relatedNudge: null,
@@ -494,6 +548,30 @@ export const externalNews = [
     date: "March 2026",
     headline:
       "Luxury wellness brands pivot to corporate wellbeing as consumer spend tightens",
+  },
+  {
+    source: "WWD",
+    date: "March 22, 2026",
+    headline:
+      "Gentle Monster's SoHo flagship draws 3,000 daily visitors with entrance-forward art installations",
+  },
+  {
+    source: "McKinsey Quarterly",
+    date: "March 20, 2026",
+    headline:
+      "Gen Z ranks brand origin story authenticity as #1 trust driver for luxury purchases",
+  },
+  {
+    source: "Jing Daily",
+    date: "March 18, 2026",
+    headline:
+      "LVMH invests €50M in heritage digitization — AI agents to navigate 150 years of archives",
+  },
+  {
+    source: "Retail Dive",
+    date: "March 15, 2026",
+    headline:
+      "The Well NYC sees 40% booking lift after featuring named practitioners with visible credentials",
   },
 ];
 
