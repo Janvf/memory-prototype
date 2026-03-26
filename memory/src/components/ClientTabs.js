@@ -3,18 +3,18 @@
 import { useState } from "react";
 import NudgeCard from "./NudgeCard";
 import ChallengeCard from "./ChallengeCard";
+import MasonryGrid from "./MasonryGrid";
 import {
   nudgeCards,
   openQuestions,
   callHistory,
-  externalNews,
+  growthFeed,
   challenges,
 } from "@/data/data";
 import {
   HelpCircle,
   Phone,
   FileText,
-  ArrowUpRight,
 } from "lucide-react";
 
 const tabs = [
@@ -55,8 +55,10 @@ export default function ClientTabs() {
 
       {/* Tab content with slide-up animation */}
       {activeTab === "Overview" && (
-        <div className="animate-slide-up">
-          <NudgeCard card={nudgeCards[0]} />
+        <div className="animate-slide-up space-y-6">
+          {nudgeCards.slice(0, 4).map((card) => (
+            <NudgeCard key={card.id} card={card} />
+          ))}
         </div>
       )}
 
@@ -122,26 +124,14 @@ export default function ClientTabs() {
       )}
 
       {activeTab === "External News" && (
-        <div className="space-y-4 animate-slide-up">
-          {externalNews.map((article, i) => (
-            <div
-              key={i}
-              className="group bg-surface border border-border hover:border-chanel-gray/40 rounded-xl px-6 py-5 flex items-start justify-between gap-4 hover-lift cursor-pointer"
-            >
-              <div>
-                <span className="text-[11px] font-mono uppercase tracking-wider text-chanel-gray">
-                  {article.source} · {article.date}
-                </span>
-                <p className="text-[15px] font-medium text-chanel-black mt-2 leading-snug">
-                  {article.headline}
-                </p>
-              </div>
-              <ArrowUpRight
-                size={16}
-                className="text-chanel-gray shrink-0 mt-1 arrow-hover"
-              />
-            </div>
-          ))}
+        <div className="animate-slide-up">
+          <MasonryGrid
+            items={growthFeed.filter(
+              (item) =>
+                item.relevantTo.includes("CHANEL") ||
+                item.relevantTo.length === 0
+            )}
+          />
         </div>
       )}
 
