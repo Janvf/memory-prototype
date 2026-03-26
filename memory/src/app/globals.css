@@ -11,3 +11,77 @@ body {
 * {
   letter-spacing: -0.02em;
 }
+
+/* Premium CHANEL utilities */
+
+/* Black accent underline */
+.underline-accent::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #0A0A0A;
+  margin-top: 8px;
+}
+
+/* Clean separator */
+.separator-luxury {
+  height: 1px;
+  background: linear-gradient(90deg, #0A0A0A, #0A0A0A 50%, transparent);
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Editorial hover - subtle background shift */
+.hover-editorial {
+  transition: background-color 0.3s ease;
+}
+
+.hover-editorial:hover {
+  background-color: #FAFAFA;
+}
+
+/* Tab underline animation */
+.tab-underline {
+  position: relative;
+}
+
+.tab-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #0A0A0A;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-underline:hover::after {
+  transform: scaleX(0.5);
+  opacity: 0.5;
+}
+
+.tab-underline.active::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* Arrow hover animation for external links */
+.arrow-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .arrow-hover {
+  transform: translate(2px, -2px);
+}

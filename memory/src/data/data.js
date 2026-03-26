@@ -211,6 +211,73 @@ export const openQuestions = [
 // Challenge-first view — Thomas feedback: start from the challenge, click in to see solutions
 export const challenges = [
   {
+    id: "113-spring-traffic",
+    title: "113 Spring isn't pulling people across the threshold",
+    client: "CHANEL",
+    severity: "high",
+    mentionCount: 3,
+    firstMentioned: "Jan 2026",
+    lastMentioned: "March 26, 2026",
+    status: "active-investigation",
+    clientUpdated: true,
+    lastClientUpdate: "Email from Charles — 14 experimentation paths proposed",
+    summary:
+      "The space exists. The longevity positioning exists. But people aren't walking in. Street-level visibility is low, the entrance doesn't pull you in, and there's no clear reason to visit today versus next month. Charles has mapped concrete paths: stronger sidewalk interruption, entrance-forward activations, hero SKUs worth seeking out, and recurring programming that builds habit. The demand is there — longevity searches are up 4X year-over-year. 113 Spring needs to convert that interest into footfall.",
+    callMentions: [
+      { date: "Jan 2026", context: "113 Spring strategy", quote: "Traffic remains the core challenge — footfall isn't converting to engagement" },
+      { date: "March 24, 2026", context: "Step Back Session", quote: "April 2nd flagged as decision point for commercial model" },
+      { date: "March 26, 2026", context: "Charles email to Greg", quote: '"Test stronger sidewalk interruption — A-frames, pavement decals, visible demos at the door"' },
+    ],
+    externalSolutions: [
+      {
+        type: "case-study",
+        title: "Gentle Monster: 45% of visits driven by entrance-forward art installations",
+        source: "Retail TouchPoints · Experiential Retail",
+        image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&q=80",
+        relevance: "Move longevity activation to the front third of the store — you're pulled in before deciding to browse",
+      },
+      {
+        type: "case-study",
+        title: "The Well NYC integrates named practitioners directly into the customer experience",
+        source: "WWD · Wellness Retail",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80",
+        relevance: "Feature visible practitioner schedules and credentials — trust drives bookings",
+      },
+      {
+        type: "trend",
+        title: "Global longevity search interest up 4X YoY — 4.9M monthly searches",
+        source: "Global Wellness Summit · 2026 Trends",
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80",
+        relevance: "Demand exists at scale — the gap is converting digital interest into physical visits",
+      },
+      {
+        type: "case-study",
+        title: "lululemon drives consistent footfall through recurring ambassador programming",
+        source: "Retail Dive · Community Retail",
+        image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80",
+        relevance: "Predictable weekly formats build habit and repeat traffic — not one-off events",
+      },
+      {
+        type: "research",
+        title: "Specialty retail becomes destination around sought-after hero SKUs",
+        source: "McKinsey · Luxury Retail 2026",
+        image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&q=80",
+        relevance: "Introduce 2-3 must-seek longevity products that generate intentional visits",
+      },
+    ],
+    suggestedApproach: {
+      title: "113 Spring Traffic Playbook",
+      description: "Test the highest-leverage traffic drivers from Charles's paths. Focus on three vectors: make the entrance irresistible, give people a reason to visit this week, and create products worth seeking out.",
+      steps: [
+        "Test entrance-forward activation: Move a longevity experience to the front third — measure entry rate lift",
+        "Test sidewalk interruption: A-frame, pavement activation, visible demo at door — measure passerby-to-entry conversion",
+        "Launch recurring weekly format: One predictable longevity ritual (recovery, movement, assessment) — measure repeat visit rate",
+        "Introduce hero SKU: One highly specific, must-seek longevity product — measure intentional visits vs. walk-ins",
+      ],
+    },
+    relatedNudge: null,
+  },
+  {
     id: "longevity-positioning",
     title: "Longevity wellness positioning is unowned",
     client: "CHANEL",
@@ -377,6 +444,12 @@ export const dataFlowSources = [
 ];
 
 export const callHistory = [
+  {
+    date: "March 26, 2026",
+    title: "Charles Email — Traffic Experimentation",
+    summary:
+      "14 paths for 113 Spring traffic across Place, Promotion, People, Product — structural execution gaps surfaced",
+  },
   {
     date: "March 24, 2026",
     title: "Step Back Session",

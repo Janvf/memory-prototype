@@ -31,72 +31,70 @@ export default function ClientTabs() {
 
   return (
     <div>
-      {/* Tab bar */}
-      <div className="flex gap-0 border-b border-border mb-6 overflow-x-auto">
+      {/* Premium Tab bar */}
+      <div className="flex gap-0 border-b border-border mb-10 overflow-x-auto">
         {tabs.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2.5 text-[13px] transition-colors relative whitespace-nowrap ${
+            className={`tab-underline px-4 py-4 text-[13px] transition-colors whitespace-nowrap ${
               activeTab === tab
-                ? "text-primary font-medium"
-                : "text-secondary hover:text-primary"
+                ? "text-chanel-black font-medium active"
+                : "text-chanel-gray hover:text-chanel-black"
             }`}
           >
             {tab}
             {tab === "Challenges" && (
-              <span className="ml-1.5 text-[10px] font-mono bg-amber/10 text-amber px-1.5 py-0.5 rounded-full">
+              <span className="ml-2 text-[10px] font-mono border border-chanel-gray/30 text-chanel-gray px-2 py-0.5 rounded-full">
                 {challenges.length}
               </span>
-            )}
-            {activeTab === tab && (
-              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary rounded-t" />
             )}
           </button>
         ))}
       </div>
 
-      {/* Tab content */}
+      {/* Tab content with slide-up animation */}
       {activeTab === "Overview" && (
-        <div>
+        <div className="animate-slide-up">
           <NudgeCard card={nudgeCards[0]} />
         </div>
       )}
 
       {activeTab === "Challenges" && (
-        <div>
-          <p className="text-[13px] text-secondary mb-4">
+        <div className="animate-slide-up">
+          <p className="text-[14px] text-chanel-gray mb-6 leading-relaxed">
             Recurring challenges identified from calls and project intelligence. Click to see external solutions and suggested approaches.
           </p>
-          <div className="space-y-3">
+          <div className="space-y-4">
             {challenges.map((challenge) => (
-              <ChallengeCard key={challenge.id} challenge={challenge} />
+              <div key={challenge.id} className="hover-lift rounded-xl">
+                <ChallengeCard challenge={challenge} />
+              </div>
             ))}
           </div>
         </div>
       )}
 
       {activeTab === "Call History" && (
-        <div className="space-y-0">
+        <div className="space-y-0 animate-slide-up">
           {callHistory.map((call, i) => (
             <div
               key={i}
-              className="flex items-start gap-4 py-4 border-b border-border last:border-0"
+              className="flex items-start gap-4 py-5 border-b border-border last:border-0 hover-editorial rounded-lg -mx-3 px-3"
             >
-              <Phone
-                size={14}
-                className="text-secondary mt-1 shrink-0"
-              />
-              <div className="min-w-0">
+              <div className="w-8 h-8 rounded-full bg-chanel-light flex items-center justify-center shrink-0">
+                <Phone size={14} className="text-chanel-gray" />
+              </div>
+              <div className="min-w-0 flex-1">
                 <div className="flex items-baseline gap-3">
-                  <span className="text-[12px] font-mono text-secondary shrink-0">
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-chanel-gray shrink-0">
                     {call.date}
                   </span>
-                  <span className="text-[14px] font-medium text-primary">
-                    {call.title}
-                  </span>
                 </div>
-                <p className="text-[13px] text-secondary mt-0.5">
+                <span className="text-[15px] font-medium text-chanel-black block mt-1">
+                  {call.title}
+                </span>
+                <p className="text-[13px] text-chanel-gray mt-1 leading-relaxed">
                   {call.summary}
                 </p>
               </div>
@@ -106,17 +104,16 @@ export default function ClientTabs() {
       )}
 
       {activeTab === "Open Questions" && (
-        <div className="space-y-0">
+        <div className="space-y-0 animate-slide-up">
           {openQuestions.map((question, i) => (
             <div
               key={i}
-              className="flex items-start gap-3 py-3.5 border-b border-border last:border-0"
+              className="flex items-start gap-4 py-5 border-b border-border last:border-0 hover-editorial rounded-lg -mx-3 px-3"
             >
-              <HelpCircle
-                size={14}
-                className="text-amber mt-0.5 shrink-0"
-              />
-              <p className="text-[14px] text-primary leading-relaxed">
+              <div className="w-8 h-8 rounded-full bg-amber/10 flex items-center justify-center shrink-0">
+                <HelpCircle size={14} className="text-amber" />
+              </div>
+              <p className="text-[15px] text-chanel-black leading-relaxed pt-1">
                 {question}
               </p>
             </div>
@@ -125,23 +122,23 @@ export default function ClientTabs() {
       )}
 
       {activeTab === "External News" && (
-        <div className="space-y-3">
+        <div className="space-y-4 animate-slide-up">
           {externalNews.map((article, i) => (
             <div
               key={i}
-              className="bg-surface border border-border rounded-lg px-5 py-4 flex items-start justify-between gap-4"
+              className="group bg-surface border border-border hover:border-chanel-gray/40 rounded-xl px-6 py-5 flex items-start justify-between gap-4 hover-lift cursor-pointer"
             >
               <div>
-                <span className="text-[11px] font-mono text-secondary">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-chanel-gray">
                   {article.source} · {article.date}
                 </span>
-                <p className="text-[14px] font-medium text-primary mt-1">
+                <p className="text-[15px] font-medium text-chanel-black mt-2 leading-snug">
                   {article.headline}
                 </p>
               </div>
               <ArrowUpRight
-                size={14}
-                className="text-tag-text shrink-0 mt-1"
+                size={16}
+                className="text-chanel-gray shrink-0 mt-1 arrow-hover"
               />
             </div>
           ))}
@@ -149,9 +146,11 @@ export default function ClientTabs() {
       )}
 
       {activeTab === "Documents" && (
-        <div className="py-12 text-center">
-          <FileText size={24} className="text-tag-text mx-auto mb-3" />
-          <p className="text-[13px] text-tag-text">
+        <div className="py-16 text-center animate-slide-up">
+          <div className="w-12 h-12 rounded-full bg-chanel-light flex items-center justify-center mx-auto mb-4">
+            <FileText size={20} className="text-chanel-gray" />
+          </div>
+          <p className="text-[14px] text-chanel-gray">
             No documents yet
           </p>
         </div>
