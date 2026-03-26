@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #0A0A0A;
+  background: #FAFAFA;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+* {
+  letter-spacing: -0.02em;
+}
