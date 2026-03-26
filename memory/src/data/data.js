@@ -201,11 +201,36 @@ export const clients = [
 ];
 
 export const openQuestions = [
-  "Is the longevity wellness space a real strategic bet for CHANEL OI — or will brand risk culture kill it again?",
-  "Heritage Agent: who owns it? Internal appetite exists but no momentum or assigned team.",
-  "113 Spring identity: innovation lab (cost centre) or independent commercial brand? April 2nd is the forcing function.",
-  "Pollinators reframe: is the credential/professional development angle worth pursuing with Greg?",
-  "Portfolio simplification: CHANEL has 6 diagnosed structural problems — is Bundl positioned to own the fix?",
+  {
+    question: "Is the longevity wellness space a real strategic bet for CHANEL OI — or will brand risk culture kill it again?",
+    askedBy: "Gregory",
+    context: "Gregory 1:1 · Feb 2026",
+    strategicImplication: "Defines whether CHANEL plays offense or defense in longevity. Remedy Place is already claiming the space — inaction equals concession."
+  },
+  {
+    question: "Heritage Agent: who owns it? Internal appetite exists but no momentum or assigned team.",
+    askedBy: "Team",
+    context: "Step Back Session · March 24, 2026",
+    strategicImplication: "The tech barrier is gone. Without an owner, this concept will stall indefinitely while competitors (LVMH's €50M heritage digitization) move ahead."
+  },
+  {
+    question: "113 Spring identity: innovation lab (cost centre) or independent commercial brand? April 2nd is the forcing function.",
+    askedBy: "Greg",
+    context: "Step Back Session · March 24, 2026",
+    strategicImplication: "This decision shapes budget, KPIs, and team structure. Commercial brand unlocks B2B revenue; cost centre means perpetual justification cycles."
+  },
+  {
+    question: "Pollinators reframe: is the credential/professional development angle worth pursuing with Greg?",
+    askedBy: "Bundl Team",
+    context: "Pollinators Sessions · Jan–Mar 2026",
+    strategicImplication: "Industry is pivoting to corporate wellness with credentials. This reframe could be 113 Spring's path to commercial viability."
+  },
+  {
+    question: "Portfolio simplification: CHANEL has 6 diagnosed structural problems — is Bundl positioned to own the fix?",
+    askedBy: "Thomas",
+    context: "BLEUprint Prioritisation · March 5, 2026",
+    strategicImplication: "Expanding Bundl's scope from project-level to portfolio-level could deepen the relationship and increase contract value."
+  },
 ];
 
 // Challenge-first view — Thomas feedback: start from the challenge, click in to see solutions
@@ -694,5 +719,65 @@ export const growthFeed = [
     relevantTo: ["Diageo"],
     contentType: "article",
     featured: false,
+  },
+  {
+    title: "The Mania Around Chanel's New Designer, Matthieu Blazy",
+    source: "Wall Street Journal",
+    date: "March 2026",
+    image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&q=80",
+    sharedBy: "Jan",
+    upvotes: 22,
+    relevantTo: ["CHANEL"],
+    contentType: "article",
+    featured: false,
+    link: "https://www.wsj.com/style/fashion/new-chanel-designer-matthieu-blazy-mania-9fd96f55",
+  },
+  {
+    title: "Is It Psychosis, Or Is It Just Matthieu Blazy's Chanel?",
+    source: "V Magazine",
+    date: "March 2026",
+    image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&q=80",
+    sharedBy: "Anne",
+    upvotes: 17,
+    relevantTo: ["CHANEL"],
+    contentType: "article",
+    featured: false,
+    link: "https://vmagazine.com/article/is-it-psychosis-or-is-it-just-matthieu-blazys-chanel/",
+  },
+  {
+    title: "Chanel backstage: Blazy's creative process revealed",
+    source: "Instagram",
+    date: "March 2026",
+    image: "https://images.unsplash.com/photo-1504198322253-cfa87a0ff25f?w=400&q=80",
+    sharedBy: "Thomas",
+    upvotes: 31,
+    relevantTo: ["CHANEL"],
+    contentType: "video",
+    featured: false,
+    link: "https://www.instagram.com/reel/DWRbxcBgv4L/",
+  },
+  {
+    title: "Luxury E-Commerce Trends: How Premium Brands Are Adapting",
+    source: "Shopify Enterprise",
+    date: "March 2026",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80",
+    sharedBy: "Leyash",
+    upvotes: 9,
+    relevantTo: ["CHANEL"],
+    contentType: "article",
+    featured: false,
+    link: "https://www.shopify.com/enterprise/blog/luxury-trends",
+  },
+  {
+    title: "Paris Fashion Week Haute Couture: The New Guard",
+    source: "Monocle",
+    date: "March 2026",
+    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80",
+    sharedBy: "Nico",
+    upvotes: 13,
+    relevantTo: ["CHANEL"],
+    contentType: "article",
+    featured: false,
+    link: "https://monocle.com/fashion/paris-fashion-week-haute-couture/",
   },
 ];

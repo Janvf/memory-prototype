@@ -107,17 +107,27 @@ export default function ClientTabs() {
 
       {activeTab === "Open Questions" && (
         <div className="space-y-0 animate-slide-up">
-          {openQuestions.map((question, i) => (
+          {openQuestions.map((item, i) => (
             <div
               key={i}
               className="flex items-start gap-4 py-5 border-b border-border last:border-0 hover-editorial rounded-lg -mx-3 px-3"
             >
-              <div className="w-8 h-8 rounded-full bg-amber/10 flex items-center justify-center shrink-0">
+              <div className="w-8 h-8 rounded-full bg-amber/10 flex items-center justify-center shrink-0 mt-0.5">
                 <HelpCircle size={14} className="text-amber" />
               </div>
-              <p className="text-[15px] text-chanel-black leading-relaxed pt-1">
-                {question}
-              </p>
+              <div className="min-w-0 flex-1">
+                <p className="text-[15px] text-chanel-black leading-relaxed font-medium">
+                  {item.question}
+                </p>
+                <div className="flex items-center gap-2 mt-2 text-[12px] text-chanel-gray">
+                  <span className="font-medium">{item.askedBy}</span>
+                  <span>·</span>
+                  <span className="font-mono">{item.context}</span>
+                </div>
+                <p className="text-[13px] text-chanel-gray mt-2 leading-relaxed">
+                  {item.strategicImplication}
+                </p>
+              </div>
             </div>
           ))}
         </div>
