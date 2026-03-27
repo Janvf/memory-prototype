@@ -13,11 +13,11 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="px-5 pt-6 pb-8">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-action flex items-center justify-center">
-            <span className="text-white text-xs font-semibold font-mono">M</span>
+          <div className="w-6 h-6 rounded-md bg-primary flex items-center justify-center">
+            <span className="text-white text-xs font-semibold font-mono">A</span>
           </div>
           <span className="text-[16px] font-semibold text-primary tracking-tight">
-            Memory
+            Aurora AI
           </span>
         </Link>
       </div>
@@ -91,6 +91,29 @@ export default function Sidebar() {
               </Link>
             );
           })}
+        </div>
+      </div>
+
+      {/* Personal */}
+      <div className="px-3 mt-4">
+        <span className="px-2 text-[11px] font-mono uppercase text-tag-text tracking-wider">
+          Personal
+        </span>
+        <div className="mt-2 space-y-0.5">
+          <Link
+            href="/personal/ai-news"
+            className="flex items-center gap-2.5 px-2 py-1.5 rounded-md text-[13px] transition-colors text-tag-text hover:text-secondary"
+          >
+            <span className="w-2 h-2 rounded-full bg-tag-text/40" />
+            AI news
+          </Link>
+          <Link
+            href="/personal/corporate-venturing"
+            className="flex items-center gap-2.5 px-2 py-1.5 rounded-md text-[13px] transition-colors text-tag-text hover:text-secondary"
+          >
+            <span className="w-2 h-2 rounded-full bg-tag-text/40" />
+            Corporate venturing news
+          </Link>
         </div>
       </div>
 

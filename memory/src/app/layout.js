@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Memory — Bundl",
+  title: "Aurora AI — Bundl",
   description: "AI client intelligence that connects the dots",
 };
 
